@@ -1,0 +1,6 @@
+template: homepage.html.j2
+title: An Example Title
+markdown_main: |
+    # An Example Heading
+
+    Some example markdown content

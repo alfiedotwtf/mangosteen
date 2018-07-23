@@ -1,0 +1,8 @@
+#!/bin/bash
+
+which virtualenv               || apt-get install -y virtualenv
+test -d pythonify/bin/activate || virtualenv -p `which python3` pythonify
+source pythonify/bin/activate
+
+pip3 install autopep8
+grep autopep8 ~/.vimrc || echo "au FileType python setlocal formatprg=autopep8\ -" >> ~/.vimrc
